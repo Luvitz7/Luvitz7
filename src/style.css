@@ -1,0 +1,344 @@
+/* Pre-Congif */
+
+:root {
+    --background: rgb(17, 17, 17);
+    --base-pag: rgb(14, 14, 14);
+    --radio-Canada: 'Radio Canada', sans-serif;
+    --tech-Mono: 'Share Tech Mono', monospace;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: aliceblue;
+    background-color: var(--background);
+    font-family: var(--tech-Mono);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 400vh;
+    width: 100%;
+}
+
+/* Header, Menu bar */
+.header {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    background-color: var(--background);
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 3;
+}
+
+button {
+    border: 0;
+    border-radius: 4px;
+}
+
+button:hover {
+    background: aliceblue;
+    transition: .5s;
+}
+
+.header-container {
+    width: auto;
+    display: flex;
+    margin-left: 20px;
+    align-items: center;
+}
+
+.title {
+    margin-left: 40px;
+}
+
+.header-menu {
+    display: inline-block;
+    width: 60px;
+}
+
+.buttonMenu {
+    background: var(--background) ;
+}
+
+.icon {
+    color: aliceblue;
+    width: 38px;
+}
+
+/* Aside and navigation */
+
+aside ul{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    margin-top: 220px;
+    margin-left: 20px;
+}
+
+aside ul li {
+    position: relative;
+    width: 40px;
+    height: 4px;
+    margin: 8px;
+    cursor: pointer;
+}
+
+aside ul li a span {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: aliceblue;
+    border-radius: 4px;
+    transition: .3s;
+}
+
+aside ul li a span:hover {
+    width: 60px;
+    background-color: red;
+    transition: .3s;
+}
+
+/* Container main page */
+
+main {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+/* Section; Works in 4 parts (Intro, About, Experience o Tecnology, and Portfolio */
+
+.section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 60px 10% 0 10%;
+}
+
+.name {
+    font-size: 150px;
+}
+
+body section:last-child {
+    display: flex;
+    align-items: initial;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+ul li {
+    list-style: none;
+}
+
+.section div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Slider for Porfolio */
+
+.portfolio {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.portfolio li {
+    width: 20px;
+    height: 8px;
+    border-radius: 5px;
+    background-color: aliceblue;
+    margin: 10px;
+}
+
+.portfolio li:hover {
+    background-color: red;
+    width: 40px;
+    transition: width .3s;
+}
+
+.portfolio li {
+    transition: .3s;
+}
+
+.slide {
+    display: flex;
+    justify-content: center;
+}
+
+.slide li{
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    opacity: 0;
+}
+
+.slide li img{
+    width: 800px;
+    height: 430px;
+    border-radius: 4px;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.slide li:first-child{
+    opacity: 1;
+}
+
+.slide li:target {
+    opacity: 1;
+}
+
+.slide li {
+    transition: opacity .5s;
+}
+
+/* Footer the contact bar */
+
+footer {
+    display: grid;
+    height: 60px;
+    width: 100%;
+    grid-template-columns: repeat(5, 100px);
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+}
+
+/* Animation */ 
+
+
+
+/*Resposive Desing */
+
+@media (max-width: 860px) {
+    .name {
+        font-size: 100px;
+    }
+
+    .slide li img{
+        width: 600px;
+        height: 800px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header-container h2 span {
+        display: none;
+    }
+    
+    aside {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        margin-top: 320px;
+    }
+
+    aside ul li {
+        position: relative;
+        width: 20px;
+        height: 4px;
+        margin: 8px;
+        cursor: pointer;
+    }
+    
+    aside ul li a span:hover {
+        width: 40px;
+        background-color: red;
+        transition: .3s;
+    }
+    
+    .section {
+        display: flex;
+        flex-direction: column;
+    }
+    .name {
+        margin-top: 15px;
+        font-size: 50px;
+        margin-bottom: 15px;
+    }
+    .intro {
+        display: flex;
+    }
+
+    .section div h2 {
+        display: none;
+    }
+    .portfolio li {
+        margin: 3px;
+    }
+    .slide li img{
+        width: 300px;
+        height: 500px;
+    }
+
+    footer{
+        grid-template-columns: repeat(4, 100px);
+    }
+
+    .contact {
+        display: none;
+    }
+    
+@media (max-width: 400px) {
+    .title {
+        margin-left: 20px;
+    }
+
+    .header-container h2 span {
+        display: none;
+    }
+
+    aside {
+        opacity: 0;
+    }
+        
+    .section {
+        display: flex;
+        flex-direction: column;
+    }
+    .name {
+        margin-top: 15px;
+        font-size: 50px;
+        margin-bottom: 15px;
+    }
+    .intro {
+        display: flex;
+    }
+    .section div h2 {
+        display: none;
+    }
+    .portfolio li {
+        margin: 3px;
+    }
+    .slide li img{
+        width: 260px;
+        height: 450px;
+        margin-bottom: 60px;
+    }
+    footer{
+        grid-template-columns: repeat(4, 60px);
+        margin-bottom: 0;
+        position: absolute;
+    }
+    .contact {
+        display: none;
+    }
+}
+}
