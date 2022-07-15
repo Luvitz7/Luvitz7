@@ -1,10 +1,11 @@
 /* Pre-Congif */
 
 :root {
-    --background: rgb(17, 17, 17);
+    --background: linear-gradient(0deg, rgba(0,0,0,.3) 0%, rgba(0,0,0,.25));
     --base-pag: rgb(14, 14, 14);
     --radio-Canada: 'Radio Canada', sans-serif;
     --tech-Mono: 'Share Tech Mono', monospace;
+    --style-backdrop-filter: blur(6px);
 }
 
 * {
@@ -12,7 +13,6 @@
     margin: 0;
     box-sizing: border-box;
     color: aliceblue;
-    background-color: var(--background);
     font-family: var(--tech-Mono);
 }
 
@@ -23,6 +23,10 @@ html {
 body {
     height: 400vh;
     width: 100%;
+    background: rgb(77,226,215);
+    background: linear-gradient(0deg, rgba(77,226,215,1) 0%, rgba(59,193,44,1) 33%, rgba(40,60,156,1) 66%, rgba(145,58,203,1) 100%);
+    /* background: rgb(61,88,87);
+    background: linear-gradient(0deg, rgba(61,88,87,1) 0%, rgba(38,46,148,1) 49%, rgba(145,58,203,1) 100%); */
 }
 
 /* Header, Menu bar */
@@ -30,21 +34,25 @@ body {
     height: 60px;
     width: 100%;
     display: flex;
-    background-color: var(--background);
+    background: var(--background);
     align-items: center;
     justify-content: space-between;
     position: fixed;
     z-index: 3;
+    backdrop-filter: var(--style-backdrop-filter);
 }
 
 button {
     border: 0;
     border-radius: 4px;
+    background: linear-gradient(0, rgba(0,0,0,0) 0, rgba(0,0,0,0) );
+    cursor: pointer;
 }
 
 button:hover {
-    background: aliceblue;
-    transition: .5s;
+    background: linear-gradient(0, rgba(0,0,0,.3) 0, rgba(0,0,0,.3) );
+    transform: scale(1.1);
+    transition: .3s;
 }
 
 .header-container {
@@ -63,31 +71,33 @@ button:hover {
     width: 60px;
 }
 
-.buttonMenu {
-    background: var(--background) ;
-}
-
 .icon {
     color: aliceblue;
     width: 38px;
 }
 
 /* Aside and navigation */
+aside {
+    z-index: 2;
+}
 
 aside ul{
     display: flex;
     flex-direction: column;
     position: fixed;
-    margin-top: 220px;
+    margin-top: 400px;
     margin-left: 20px;
+    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%);
+    border-radius: 4px;
 }
 
 aside ul li {
     position: relative;
     width: 40px;
-    height: 4px;
+    height: 8px;
     margin: 8px;
     cursor: pointer;
+    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%);
 }
 
 aside ul li a span {
@@ -121,7 +131,8 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    padding: 60px 10% 0 10%;
+    height: 100%-120px;
+    padding: 20px 10% 0 10%;
 }
 
 .name {
@@ -149,9 +160,8 @@ ul li {
 
 .portfolio {
     display: flex;
-    margin-bottom: 10px;
     justify-content: center;
-    margin-top: 16px;
+    margin-top: 0;
 }
 
 .portfolio li {
@@ -189,7 +199,7 @@ ul li {
     height: 430px;
     border-radius: 4px;
     object-fit: cover;
-    z-index: 1;
+    z-index: 2;
 }
 
 .slide li:first-child{
@@ -213,12 +223,16 @@ footer {
     grid-template-columns: repeat(5, 100px);
     justify-content: center;
     align-items: center;
+    bottom: 0;
+    position: fixed;
+    background: var(--background);
+    backdrop-filter: var(--style-backdrop-filter);
 }
 
 .footer {
     margin-left: auto;
     margin-right: auto;
-    z-index: 2;
+    z-index: 1;
 }
 
 /* Animation */ 
@@ -233,9 +247,10 @@ footer {
     }
 
     .slide li img{
-        width: 600px;
-        height: 800px;
+        width: 450px;
+        height: 550px;
     }
+
 }
 
 @media (max-width: 600px) {
@@ -247,14 +262,14 @@ footer {
         display: flex;
         flex-direction: column;
         position: fixed;
-        margin-top: 320px;
+        margin-top: 130px;
     }
 
     aside ul li {
         position: relative;
         width: 20px;
-        height: 4px;
-        margin: 8px;
+        height: 8px;
+        margin: 4px;
         cursor: pointer;
     }
     
@@ -269,12 +284,12 @@ footer {
         flex-direction: column;
     }
     .name {
-        margin-top: 15px;
         font-size: 50px;
         margin-bottom: 15px;
     }
-    .intro {
-        display: flex;
+
+    .seccion-title {
+        margin-top: 60px;
     }
 
     .section div h2 {
@@ -305,23 +320,25 @@ footer {
         display: none;
     }
 
-    aside {
-        opacity: 0;
-    }
-        
     .section {
         display: flex;
         flex-direction: column;
     }
     .name {
-        margin-top: 15px;
         font-size: 50px;
         margin-bottom: 15px;
+    }
+    .seccion-title{
+        margin-top: 60px;
     }
     .intro {
         display: flex;
     }
     .section div h2 {
+        display: none;
+    }
+    
+    aside {
         display: none;
     }
     .portfolio li {
@@ -335,7 +352,6 @@ footer {
     footer{
         grid-template-columns: repeat(4, 60px);
         margin-bottom: 0;
-        position: absolute;
     }
     .contact {
         display: none;
