@@ -156,6 +156,21 @@ ul li {
     justify-content: space-around;
 }
 
+/* Structure pacman Gosth */
+
+.body-pacman {
+    background: greenyellow;
+    width: 100px;
+    height: 120px;
+    border-radius: 50px 50px 0 0;
+}
+
+.eyes {
+    background-color: aliceblue;
+    width: 20px;
+    height: 30px;
+}
+
 /* Slider for Porfolio */
 
 .portfolio {
