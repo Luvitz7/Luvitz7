@@ -18,7 +18,6 @@ const viewMenu = () => {
 const ghostVulnerable = () => {
     const ghost = document.getElementById('body-ghost');
     ghost.setAttribute('CLASS', ghost.getAttribute('CLASS') +' vulnerable');
-    console.log(ghost.getAttribute('CLASS'))
     setTimeout(() =>
         ghost.setAttribute('class', 'body-pacman')
     ,3000)
