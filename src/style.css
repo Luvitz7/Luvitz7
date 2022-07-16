@@ -167,8 +167,20 @@ main {
     transition: .2s;
 }
 
-.menu-list li:hover {
+.list-element:nth-child(1):hover {
     background: blueviolet;
+}
+
+.list-element:nth-child(2):hover {
+    background: rgba(40,60,156,1);
+}
+
+.list-element:nth-child(3):hover {
+    background: rgba(59,193,44,1) ;
+}
+
+.list-element:nth-child(4):hover {
+    background: rgb(77,226,215);
 }
 
 /* Section; Works in 4 parts (Intro, About, Experience o Tecnology, and Portfolio */
@@ -267,10 +279,13 @@ ul li {
 
 /* Slider for Porfolio */
 
+.seccion-title-portfolio {
+    margin-top: 10px;
+}
 .portfolio {
     display: flex;
     justify-content: center;
-    margin-top: 0;
+    margin-top: 0px;
 }
 
 .portfolio li {
@@ -455,7 +470,6 @@ footer {
     .slide li img{
         width: 260px;
         height: 450px;
-        margin-bottom: 60px;
     }
     footer{
         grid-template-columns: repeat(4, 60px);
