@@ -279,9 +279,6 @@ ul li {
 
 /* Slider for Porfolio */
 
-.seccion-title-portfolio {
-    margin-top: 10px;
-}
 .portfolio {
     display: flex;
     justify-content: center;
@@ -464,6 +461,11 @@ footer {
     aside {
         display: none;
     }
+
+    .seccion-title-portfolio {
+        margin-top: 10px;
+    }
+    
     .portfolio li {
         margin: 3px;
     }
