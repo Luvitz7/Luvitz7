@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Radio+Canada:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/style.css">
-    <script src="src/script.js"></script>
+    <script src="src/script.js" defer></script>
     <title>LudwigPV</title>
 </head>
 <body>
@@ -25,7 +25,7 @@
             <h2 class="title">Ludwig PV<span> - Fronted developer</span> </h2>
         </div>
         <div class="header-menu">
-            <button class="buttonMenu">
+            <button class="buttonMenu" onclick="viewMenu()" id="buttonMenu">
                 <img loading="lazy" src="assets/icons/menu.svg" alt="menu" class="icon">
             </button>
         </div>    
@@ -38,6 +38,14 @@
             <li><a href="#section-portfolio"><span></span></a></li>
         </ul>
     </aside>
+    <nav class="navbar-menu" id="navMenu">
+        <ul>
+            <li><a class="list-element" href="#seccion-presentation">Home</a></li>
+            <li><a class="list-element" href="#section-aboutMe">About Me</a></li>
+            <li><a class="list-element" href="#section-tecno">Knowledge</a></li>
+            <li><a class="list-element"href="#section-portfolio">Projects</a></li>
+        </ul>
+    </nav>
     <main>
         <section class="section" id="seccion-presentation">
             <div class="my-name">
@@ -45,14 +53,15 @@
                </div>
             <div class="desing">
                 <div class="container-pacman-ghost">
-                    <div class="body-pacman">
-                        <div class="eyes eye-left"></div>
-                        <div class="eyes eye-right"></div>
+                    <div class="body-pacman" id="body-ghost" onclick="ghostVulnerable()" value="hola">
+                        <div class="eyes eye-left">
+                            <div class="eye-iris eye-iris-left" id="eyeL"></div>
+                        </div>
+                        <div class="eyes eye-right" >
+                            <div class="eye-iris eye-iris-rigth" id="eyeR"></div>
+                        </div>
                     </div>
-                </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur dolore laborum modi? Repellendus ut vero vel rerum assumenda eum ullam beatae iure molestiae provident, expedita velit inventore dolores animi doloremque.
-                Ut voluptas magni atque reprehenderit eveniet temporibus veritatis ipsum. Exercitationem possimus veniam iste tempore provident nostrum facere assumenda, totam excepturi impedit, repudiandae voluptatibus delectus. Atque culpa rerum ex molestiae libero?
-                Assumenda culpa expedita voluptates nulla, omnis facilis maiores aut. Quasi ea eaque rem quam error facilis aperiam quo omnis ipsa, aut dolor repellendus consequatur accusantium, placeat nam cupiditate tempora quaerat!</p>
+                </div>     
             </div>
         </section>
         <section class="section" id="section-aboutMe">
@@ -123,5 +132,6 @@
         <button class="footer"><a href="https://www.instagram.com/ludwigjpl/"><img loading="lazy" height="32" width="32" src="assets/icons/instagram.svg" alt="instagram"></a></button>
         <button class="footer"><a href="https://www.linkedin.com/in/ludwig-p%C3%A9rez-91b6b321a/"> <img loading="lazy" height="32" width="32" src="assets/icons/linkedin.svg" alt="linkedin"></a></button>
     </footer>
+
 </body>
 </html>

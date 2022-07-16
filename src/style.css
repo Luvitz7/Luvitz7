@@ -125,6 +125,51 @@ main {
     grid-template-rows: repeat(4, 1fr);
 }
 
+/* Navbar Menu */
+
+.navbar-menu-hidden {
+    width: 100%;
+    max-width: 300px;
+    height: 20rem;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    top: 60px;
+    right: -300px;
+    position: fixed;
+    transition: .5s;
+    border-radius: 8px;
+}
+
+.navbar-menu {
+    width: 100%;
+    max-width: 300px;
+    height: 20rem;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    top: 60px;
+    right: 0;
+    position: fixed;
+    transition: .5s;
+    z-index: 1;
+    border-radius: 8px;
+}
+.list-element {
+    display: inline-block;
+    color: black;
+    font-weight: 500;
+    font-size: 3.5rem;
+    width: 100%;
+    transition: .2s;
+}
+
+.menu-list li:hover {
+    background: blueviolet;
+}
+
 /* Section; Works in 4 parts (Intro, About, Experience o Tecnology, and Portfolio */
 
 .section {
@@ -160,16 +205,64 @@ ul li {
 
 .body-pacman {
     background: greenyellow;
-    width: 100px;
-    height: 120px;
+    width: 120px;
+    height: 150px;
     border-radius: 50px 50px 0 0;
+    justify-content: space-around;
+    animation-name: ghost;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    transition: .3s;
 }
 
 .eyes {
     background-color: aliceblue;
-    width: 20px;
-    height: 30px;
+    width: 30px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
 }
+
+.eye-iris {
+    background-color: rgb(87, 119, 189);
+    width: 15px;
+    height: 15px;
+    border-radius: 45%;
+    /* animation-name: eyes-move;
+    animation-duration: 1.5s;
+    animation-iteration-count: 2;
+    animation-delay: 2s; */
+}
+
+.vulnerable {
+    background: rgb(33, 33, 255);
+    animation-name: vulnerable-ghost;
+    animation-duration: 1.5s;
+    animation-iteration-count: 3;
+    transition: .3s;
+}
+/* Animation for pacman ghost */
+
+@keyframes ghost {
+    0%{ transform: translateX(-40%);}
+    50%{ transform: translateX(90%);}
+    100%{ transform: translateX(-40%);}
+}
+
+@keyframes vulnerable-ghost {
+    0%{ transform: translateX(-40%) scale(.9);}
+    50%{ transform: translateX(90%) scale(.9);}
+    100%{ transform: translateX(-40%) scale(.9);}
+}
+
+/* @keyframes eyes-move {
+    0% { transform: translateX(0);}
+    50% { transform: translateX(-10px);} 
+    100% { transform: translateX(0);}   
+} */
 
 /* Slider for Porfolio */
 
@@ -251,7 +344,6 @@ footer {
 }
 
 /* Animation */ 
-
 
 
 /*Resposive Desing */
