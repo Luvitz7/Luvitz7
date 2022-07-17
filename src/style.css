@@ -168,21 +168,10 @@ main {
     transition: .2s;
 }
 
-.list-element:nth-child(1):hover {
+.list-element:hover {
     background: linear-gradient(0, rgba(0,0,0,0.2), rgba(0,0,0,0.2) );
 }
 
-.list-element:nth-child(2):hover {
-    background: rgba(40,60,156,1);
-}
-
-.list-element:nth-child(3):hover {
-    background: rgba(59,193,44,1) ;
-}
-
-.list-element:nth-child(4):hover {
-    background: rgb(77,226,215);
-}
 
 /* Section; Works in 4 parts (Intro, About, Experience o Tecnology, and Portfolio */
 
@@ -190,7 +179,8 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    padding: 20px 10% 0 10%;   
+    padding: 0 10% 0 10%;   
+    justify-content: center;
 }
 
 .name {
@@ -199,9 +189,9 @@ main {
 
 body section:last-child {
     display: flex;
-    align-items: initial;
     flex-direction: column;
     padding-top: 70px;
+    justify-content: initial;
 }
 
 ul li {
@@ -347,7 +337,7 @@ ul li {
     height: 430px;
     border-radius: 4px;
     object-fit: cover;
-    z-index: 2;
+    z-index: 3;
 }
 
 .slide li:first-child{
