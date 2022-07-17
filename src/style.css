@@ -451,10 +451,10 @@ footer {
         font-size: 50px;
         margin-bottom: 15px;
     }
-
+/* 
     .seccion-title {
         margin-top: 60px;
-    }
+    } */
 
     .section div h2 {
         display: none;
@@ -493,17 +493,13 @@ footer {
         display: none;
     }
 
-    .section {
-        display: flex;
-        flex-direction: column;
-    }
     .name {
         font-size: 50px;
         margin-bottom: 135px;
     }
-    .seccion-title{
+    /* .seccion-title{
         margin-top: 60px;
-    }
+    } */
     .intro {
         display: flex;
     }
@@ -513,10 +509,6 @@ footer {
     
     aside {
         display: none;
-    }
-
-    .seccion-title-portfolio {
-        margin-top: 2rem;
     }
 
     .portfolio li {
