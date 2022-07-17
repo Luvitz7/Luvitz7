@@ -466,7 +466,7 @@ footer {
     }
     .skills-section {
         justify-content: center;
-        margin-left: auto;
+        margin-left: 0;
     }    
     .portfolio li {
         margin: 3px;
