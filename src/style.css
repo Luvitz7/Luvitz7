@@ -463,6 +463,10 @@ footer {
     .container-skills-svg {
         width: 100%;
         height: auto;
+    }
+    .skills-section {
+        justify-content: center;
+        margin-left: auto;
     }    
     .portfolio li {
         margin: 3px;
