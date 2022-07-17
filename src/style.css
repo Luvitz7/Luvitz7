@@ -27,6 +27,7 @@ body {
     background: linear-gradient(0deg, rgba(77,226,215,1) 0%, rgba(59,193,44,1) 33%, rgba(40,60,156,1) 66%, rgba(145,58,203,1) 100%);
     /* background: rgb(61,88,87);
     background: linear-gradient(0deg, rgba(61,88,87,1) 0%, rgba(38,46,148,1) 49%, rgba(145,58,203,1) 100%); */
+    overscroll-behavior-block: contain;
 }
 
 /* Header, Menu bar */
@@ -168,7 +169,7 @@ main {
 }
 
 .list-element:nth-child(1):hover {
-    background: blueviolet;
+    background: linear-gradient(0, rgba(0,0,0,0.2), rgba(0,0,0,0.2) );
 }
 
 .list-element:nth-child(2):hover {
@@ -189,8 +190,7 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    height: 100%-120px;
-    padding: 20px 10% 0 10%;
+    padding: 20px 10% 0 10%;   
 }
 
 .name {
@@ -201,7 +201,7 @@ body section:last-child {
     display: flex;
     align-items: initial;
     flex-direction: column;
-    margin-top: 60px;
+    padding-top: 70px;
 }
 
 ul li {
@@ -210,7 +210,6 @@ ul li {
 
 .section div:first-child {
     display: flex;
-    align-items: center;
     justify-content: space-around;
 }
 
@@ -227,6 +226,7 @@ ul li {
     animation-timing-function: ease-out;
     animation-iteration-count: infinite;
     transition: .3s;
+    align-items: center;
 }
 
 .eyes {
@@ -276,6 +276,33 @@ ul li {
     50% { transform: translateX(-10px);} 
     100% { transform: translateX(0);}   
 } */
+
+/* Skills Section */
+
+.container-skills-svg {
+    width: 90%;
+    height: 24rem;
+    background: linear-gradient(0 ,rgba(0,0,0,.5) , rgba(0,0,0,.5));
+    backdrop-filter: drop-shadow(4px 4px 10px blue);
+    border-radius: 8px;
+}
+
+.container-icons-tecnology .vanilla, .frameworks {
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.frameworks {
+    margin-top: 1.65rem;
+}
+
+.skills-section {
+    justify-content: center;
+    margin-left: 2rem;
+}
+
 
 /* Slider for Porfolio */
 
@@ -358,6 +385,23 @@ footer {
 
 /* Animation */ 
 
+@keyframes skillsMoveLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes skillsMoveRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
 
 /*Resposive Desing */
 
@@ -415,6 +459,11 @@ footer {
     .section div h2 {
         display: none;
     }
+
+    .container-skills-svg {
+        width: 100%;
+        height: auto;
+    }    
     .portfolio li {
         margin: 3px;
     }
@@ -446,7 +495,7 @@ footer {
     }
     .name {
         font-size: 50px;
-        margin-bottom: 15px;
+        margin-bottom: 135px;
     }
     .seccion-title{
         margin-top: 60px;
@@ -465,7 +514,7 @@ footer {
     .seccion-title-portfolio {
         margin-top: 10px;
     }
-    
+
     .portfolio li {
         margin: 3px;
     }
