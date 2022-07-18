@@ -473,13 +473,13 @@ footer {
         .container-title-projects {
             margin-top: 5rem
         }
-    @media (max-height: 370px) {
+    @media (max-height: 380px) {
         .slide li img{
             width: 350px;
             height: 200px;
         }
         .container-title-projects {
-            margin-top: 1rem
+            margin-top: 2rem
         }
     }
     @media (max-height: 290px) {
@@ -574,12 +574,10 @@ footer {
     .contact {
         display: none;
     }
-    @media (max-width: 750px) {
+    @media (max-height: 780px){
         .container-title-projects {
-            margin-top: 4rem
+            margin-top: 5rem
         }
-    }
-
 }    
 @media (max-width: 400px) {
     .title {
@@ -617,7 +615,6 @@ footer {
         width: 240px;
         height: 290px;
     }
-    
 
     .portfolio li {
         margin: 3px;
@@ -633,7 +630,7 @@ footer {
     .contact {
         display: none
     }
-    @media (max-height: 640px){
+    @media (max-height: 670px){
         .container-title-projects {
             margin-top: 5rem
         }
