@@ -552,6 +552,17 @@ footer {
         display: none;
     }
 
+    .container-photo {
+        width: 290px;
+        height: 340px;
+    }    
+    
+    .my-photo {
+        width: 240px;
+        height: 290px;
+    }
+    
+
     .portfolio li {
         margin: 3px;
     }
