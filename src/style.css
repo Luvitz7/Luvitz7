@@ -325,7 +325,7 @@ ul li {
 }
 
 .container-title-projects {
-    margin-top: 5rem;
+    margin-top: 90px;
 }
 
 .portfolio {
@@ -510,9 +510,6 @@ footer {
         margin-right: 1.7rem;
         align-items: initial;
     }    
-    .container-title-projects {
-        margin-top: 6rem;
-    }
     .portfolio li {
         margin: 5px;
     }
