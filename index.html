@@ -17,39 +17,40 @@
 <body>
     <header class="header ">
         <div class="header-container">
-            <button  class="home-button">
-                <a href="#seccion-presentation">
+            <button class="home-button" type="button">
+                <a href="#seccion-presentation" aria-label="seccion de presentacion">
                     <img loading="lazy" src="assets/icons/home1.svg" alt="home" class="icon">
                 </a>
             </button>
             <h2 class="title">Ludwig PV<span> - Fronted developer</span> </h2>
         </div>
         <div class="header-menu">
-            <button class="buttonMenu" onclick="viewMenu()" id="buttonMenu">
+            <button class="buttonMenu" onclick="viewMenu()" id="buttonMenu" type="button">
                 <img loading="lazy" src="assets/icons/menu.svg" alt="menu" class="icon">
             </button>
         </div>    
     </header>
     <nav class="navbar-menu-hidden" id="navMenu">
         <ul class="list-menu">
-            <li><a class="list-element" href="#seccion-presentation">Home</a></li>
-            <li><a class="list-element" href="#section-aboutMe">About Me</a></li>
-            <li><a class="list-element" href="#section-skills">Skills</a></li>
-            <li><a class="list-element"href="#section-projects">Projects</a></li>
+            <li><a class="list-element" href="#seccion-presentation" aria-label="presentacion">Home</a></li>
+            <li><a class="list-element" href="#section-aboutMe" aria-label="acerca de mi">About Me</a></li>
+            <li><a class="list-element" href="#section-skills" aria-label="habilidades">Skills</a></li>
+            <li><a class="list-element"href="#section-projects" aria-label="projectos">Projects</a></li>
         </ul>
     </nav>
     <aside class="hamburger-menu-navigation">
         <ul>
-            <li><a href="#seccion-presentation"><span></span></a></li>
-            <li><a href="#section-aboutMe"><span></span></a></li>
-            <li><a href="#section-skills"><span></span></a></li>
-            <li><a href="#section-projects"><span></span></a></li>
+            <li><a href="#seccion-presentation" aria-label="presentacion"><span></span></a></li>
+            <li><a href="#section-aboutMe" aria-label="acerca de mi"><span></span></a></li>
+            <li><a href="#section-skills" aria-label="habilidades"><span></span></a></li>
+            <li><a href="#section-projects" aria-label="projectos"><span></span></a></li>
         </ul>
     </aside>
     <main>
         <section class="section" id="seccion-presentation">
             <div class="my-name">
                 <h1 class="name seccion-title">Ludwig<span> PV</span>
+                    <span class="frontendDev">Frontend Developer</span>
                 </h1>
                </div>
             <div class="desing">
@@ -66,12 +67,12 @@
             </div>
         </section>
         <section class="section" id="section-aboutMe">
-            <article>
-                <div class="me">
-                    
+            <article class="card-my-self">
+                <div class="container-photo">
+                    <img class="my-photo" src="https://cdn.pixabay.com/photo/2015/11/16/14/43/cat-1045782_960_720.jpg" alt="gato">
                 </div>
             </article>
-            <article>
+            <article class="my-description">
             <h2 class="seccion-title">About me</h2>
             <p>Hello! I am Ludwig and i have 27 years old. I´m consider a very curious person. My interest are music, travel, drowing and technology
             </p>
@@ -106,16 +107,16 @@
             <article class="container-title-projects">
                 <h2 class="seccion-title">Portafolio</h2>
                 <ul class="portfolio">
-                    <a href="#slide1"><li></li></a>
-                    <a href="#slide2"><li></li></a>
-                    <a href="#slide3"><li></li></a>
-                    <a href="#slide4"><li></li></a>
-                    <a href="#slide5"><li></li></a>
-                    <a href="#slide6"><li></li></a>
-                    <a href="#slide7"><li></li></a>
-                    <a href="#slide8"><li></li></a>
-                    <a href="#slide9"><li></li></a>
-                    <a href="#slide10"><li></li></a>
+                    <li><a href="#slide1" aria-label="proyecto 1"><span></span></a></li>
+                    <li><a href="#slide2" aria-label="proyecto 2"><span></span></a></li>
+                    <li><a href="#slide3" aria-label="proyecto 3"><span></span></a></li>
+                    <li><a href="#slide4" aria-label="proyecto 4"><span></span></a></li>
+                    <li><a href="#slide5" aria-label="proyecto 5"><span></span></a></li>
+                    <li><a href="#slide6" aria-label="proyecto 6"><span></span></a></li>
+                    <li><a href="#slide7" aria-label="proyecto 7"><span></span></a></li>
+                    <li><a href="#slide8" aria-label="proyecto 8"><span></span></a></li>
+                    <li><a href="#slide9" aria-label="proyecto 9"><span></span></a></li>
+                    <li><a href="#slide10" aria-label="proyecto 10"><span></span></a></li>
                 </ul>
             </article>
             <div class="slide-container">
@@ -138,10 +139,10 @@
         <div class="footer contact">
         Contacto:
         </div>
-        <button class="footer"><a href="mailto:lu.pv7@outlook.com"><img loading="lazy" height="40" width="40" src="assets/icons/mail.svg" alt="mail"></a></button>
-        <button class="footer"><a href="https://github.com/Luvitz7"><img loading="lazy" height="32" width="32" src="assets/icons/github.svg" alt="github"></a></button>
-        <button class="footer"><a href="https://www.instagram.com/ludwigjpl/"><img loading="lazy" height="32" width="32" src="assets/icons/instagram.svg" alt="instagram"></a></button>
-        <button class="footer"><a href="https://www.linkedin.com/in/ludwig-p%C3%A9rez-91b6b321a/"> <img loading="lazy" height="32" width="32" src="assets/icons/linkedin.svg" alt="linkedin"></a></button>
+        <button class="footer" type="button"><a href="mailto:lu.pv7@outlook.com"><img loading="lazy" height="40" width="40" src="assets/icons/mail.svg" alt="mail"></a></button>
+        <button class="footer" type="button"><a href="https://github.com/Luvitz7"><img loading="lazy" height="32" width="32" src="assets/icons/github.svg" alt="github"></a></button>
+        <button class="footer" type="button"><a href="https://www.instagram.com/ludwigjpl/"><img loading="lazy" height="32" width="32" src="assets/icons/instagram.svg" alt="instagram"></a></button>
+        <button class="footer" type="button"><a href="https://www.linkedin.com/in/ludwig-p%C3%A9rez-91b6b321a/"> <img loading="lazy" height="32" width="32" src="assets/icons/linkedin.svg" alt="linkedin"></a></button>
     </footer>
 
 </body>

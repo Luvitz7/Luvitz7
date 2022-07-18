@@ -6,12 +6,13 @@
     --radio-Canada: 'Radio Canada', sans-serif;
     --tech-Mono: 'Share Tech Mono', monospace;
     --style-backdrop-filter: blur(6px);
+    --box-shadow-effect: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     color: aliceblue;
     font-family: var(--tech-Mono);
 }
@@ -27,7 +28,7 @@ body {
     background: linear-gradient(0deg, rgba(77,226,215,1) 0%, rgba(59,193,44,1) 33%, rgba(40,60,156,1) 66%, rgba(145,58,203,1) 100%);
     /* background: rgb(61,88,87);
     background: linear-gradient(0deg, rgba(61,88,87,1) 0%, rgba(38,46,148,1) 49%, rgba(145,58,203,1) 100%); */
-    overscroll-behavior-block: contain;
+
 }
 
 /* Header, Menu bar */
@@ -196,6 +197,10 @@ ul li {
     justify-content: space-around;
 }
 
+.frontendDev {
+    display: none;
+}
+
 /* Structure pacman Gosth */
 
 .body-pacman {
@@ -260,6 +265,30 @@ ul li {
     100% { transform: translateX(0);}   
 } */
 
+/* My description */
+
+.card-my-self {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-photo {
+    width: 350px;
+    height: 400px;
+    border-radius: 50%;
+    background: linear-gradient(0deg, rgba(253,187,45,1) 0%, rgba(233,227,149,0.9836309523809523) 64%, rgba(253,187,45,1) 100%);
+    box-shadow: var(--box-shadow-effect)
+}    
+
+.my-photo {
+    margin: auto;
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
 /* Skills Section */
 
 .container-skills-svg {
@@ -321,6 +350,13 @@ ul li {
     transition: .3s;
 }
 
+.portfolio li a span{
+    width: 20px;
+    height: 8px;
+    position: absolute;
+    overflow: hidden;
+}
+
 .slide {
     display: flex;
     justify-content: center;
@@ -339,6 +375,7 @@ ul li {
     border-radius: 4px;
     object-fit: cover;
     z-index: 3;
+    box-shadow: var(--box-shadow-effect);
 }
 
 .slide li:first-child{
@@ -405,7 +442,9 @@ footer {
         width: 450px;
         height: 550px;
     }
-
+    .my-description {
+        margin-left: 2rem;
+    }
 }
 
 @media (max-width: 600px) {
@@ -451,13 +490,24 @@ footer {
         display: none;
     }
 
+    .frontendDev {
+        display: inline;
+    }
+
+    .my-description {
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+
     .container-skills-svg {
         width: 100%;
         height: auto;
     }
     .skills-section {
         justify-content: center;
-        margin-left: 0;
+        margin-left: 0.3rem;
+        margin-right: 1.7rem;
+        align-items: initial;
     }    
     .portfolio li {
         margin: 5px;
