@@ -582,7 +582,7 @@ footer {
     .contact {
         display: none;
     }
-    @media (max-height: 780px){
+    @media (max-height: 720px){
         .container-title-projects {
             margin-top: 5rem
         }
@@ -638,10 +638,11 @@ footer {
     .contact {
         display: none
     }
-    @media (max-height: 670px){
+    @media (max-height: 665px){
         .container-title-projects {
             margin-top: 5rem
         }
+}
 }
 }
 
