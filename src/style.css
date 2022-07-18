@@ -435,6 +435,10 @@ footer {
 /*Resposive Desing */
 
 @media (max-height: 450px) {
+    aside ul {
+        margin-top: 200px;
+        margin-left: 20px;
+    }
     .slide li img{
         width: 350px;
         height: 200px;
@@ -466,6 +470,10 @@ footer {
 
 @media (max-width: 750px) {
     @media (max-height: 550px) {
+        aside ul {
+            margin-top: 200px;
+            margin-left: 20px;
+        }
         .slide li img{
             width: 350px;
             height: 200px;
