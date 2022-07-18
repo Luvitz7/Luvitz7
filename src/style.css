@@ -510,6 +510,9 @@ footer {
         margin-right: 1.7rem;
         align-items: initial;
     }    
+    .container-title-projects {
+        margin-top: 140px;
+    }
     .portfolio li {
         margin: 5px;
     }
