@@ -187,13 +187,6 @@ main {
     font-size: 150px;
 }
 
-body section:last-child {
-    display: flex;
-    flex-direction: column;
-    padding-top: 70px;
-    justify-content: initial;
-}
-
 ul li {
     list-style: none;
 }
@@ -296,6 +289,13 @@ ul li {
 
 /* Slider for Porfolio */
 
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .portfolio {
     display: flex;
     justify-content: center;
@@ -320,6 +320,10 @@ ul li {
     transition: .3s;
 }
 
+.slide-container {
+    width: auto;
+    height: 70%;
+}
 .slide {
     display: flex;
     justify-content: center;
@@ -459,7 +463,7 @@ footer {
         margin-left: 0;
     }    
     .portfolio li {
-        margin: 3px;
+        margin: 5px;
     }
     .slide li img{
         width: 300px;
