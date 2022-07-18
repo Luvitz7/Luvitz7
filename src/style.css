@@ -351,7 +351,7 @@ ul li {
 }
 
 .portfolio li a span{
-    width: 20px;
+    width: 40px;
     height: 8px;
     position: absolute;
     overflow: hidden;
@@ -410,6 +410,7 @@ footer {
     margin-right: auto;
     z-index: 1;
 }
+
 
 /* Animation */ 
 
@@ -509,6 +510,9 @@ footer {
         margin-right: 1.7rem;
         align-items: initial;
     }    
+    .container-title-projects {
+        margin-top: 6rem;
+    }
     .portfolio li {
         margin: 5px;
     }
