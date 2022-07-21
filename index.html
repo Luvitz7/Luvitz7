@@ -22,7 +22,7 @@
                     <img loading="lazy" src="assets/icons/home1.svg" alt="home" class="icon">
                 </a>
             </button>
-            <h2 class="title">Ludwig PV<span> - Fronted developer</span> </h2>
+            <h2 class="title" id="titleName">Ludwig PV<span> - Fronted developer</span> </h2>
         </div>
         <div class="header-menu">
             <button class="buttonMenu" onclick="viewMenu()" id="buttonMenu" type="button">
@@ -30,7 +30,7 @@
             </button>
         </div>    
     </header>
-    <nav class="navbar-menu-hidden" id="navMenu">
+    <nav class="navbar-menu navbar-menu-hidden" id="navMenu">
         <ul class="list-menu">
             <li><a class="list-element" href="#seccion-presentation" aria-label="presentacion">Home</a></li>
             <li><a class="list-element" href="#section-aboutMe" aria-label="acerca de mi">About Me</a></li>
@@ -49,7 +49,8 @@
     <main>
         <section class="section" id="seccion-presentation">
             <div class="my-name">
-                <h1 class="name seccion-title">Ludwig<span> PV</span>
+                <h1 class="name seccion-title">
+                    <span class="my-name-title">Ludwig<span> PV</span></span>
                     <span class="frontendDev">Frontend Developer</span>
                 </h1>
                </div>
@@ -69,7 +70,9 @@
         <section class="section" id="section-aboutMe">
             <article class="card-my-self">
                 <div class="container-photo">
-                    <img class="my-photo" src="https://cdn.pixabay.com/photo/2015/11/16/14/43/cat-1045782_960_720.jpg" alt="gato">
+                    <picture>
+                        <img class="my-photo" src="assets/icons/FotoLu2.jpg" alt="my-photo">
+                    </picture>
                 </div>
             </article>
             <article class="my-description">
@@ -88,7 +91,11 @@
                             <svg role="img" viewBox="0 0 24 24" width="50" heigth="50" fill="#F7DF1E" xmlns="http://www.w3.org/2000/svg"><title>JavaScript</title><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></svg>
                             <svg role="img" viewBox="0 0 24 24" width="50" heigth="50" fill="#1572B6" xmlns="http://www.w3.org/2000/svg"><title>CSS3</title><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z"/></svg>
                         </div>
-                        <div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quae unde incidunt iure beatae, maiores reprehenderit iusto, temporibus minima blanditiis facilis quos exercitationem mollitia. Accusamus ipsa esse qui ex dolores.</p></div>
+                        <div>
+                            <p>
+                                
+                            </p>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -121,23 +128,23 @@
             </article>
             <div class="slide-container">
                 <ul class="slide">
-                    <li id="slide1"><img loading="lazy" src="https://cdn.pixabay.com/photo/2016/08/11/23/48/mountains-1587287_960_720.jpg" alt="mountains" srcset=""></li>
-                    <li id="slide2"><img loading="lazy" src="https://cdn.pixabay.com/photo/2016/11/18/17/20/living-room-1835923_960_720.jpg" alt="sala"></li>
-                    <li id="slide3"><img loading="lazy" src="https://cdn.pixabay.com/photo/2013/10/09/02/27/lake-192990_960_720.jpg" alt="lago"></li>
-                    <li id="slide4"><img loading="lazy" src="https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593327_960_720.jpg" alt="laptop"></li>
-                    <li id="slide5"><img loading="lazy" src="https://cdn.pixabay.com/photo/2021/10/07/15/23/real-estate-6688945_960_720.jpg" alt="inmobiliaria"></li>
-                    <li id="slide6"><img loading="lazy" src="https://cdn.pixabay.com/photo/2017/11/09/21/41/cat-2934720_960_720.jpg" alt="cat"></li>
-                    <li id="slide7"><img loading="lazy" src="https://cdn.pixabay.com/photo/2018/03/18/15/26/villa-3237114_960_720.jpg" alt="gosth-house"></li>
-                    <li id="slide8"><img loading="lazy" src="https://cdn.pixabay.com/photo/2022/04/12/23/27/hot-air-balloons-7129121_960_720.jpg" alt="hot-air-ballons"></li>
-                    <li id="slide9"><img loading="lazy" src="https://cdn.pixabay.com/photo/2022/01/22/16/54/book-6957870_960_720.jpg" alt="book"></li>
-                    <li id="slide10"><img loading="lazy" src="https://cdn.pixabay.com/photo/2022/02/23/05/10/tiramisu-7030032_960_720.jpg" alt="tiramisu"></li>
+                    <li id="slide1"><picture><img loading="lazy" src="https://cdn.pixabay.com/photo/2013/10/09/02/27/lake-192990_960_720.jpg" alt="lago"></picture></li>
+                    <li id="slide2"><picture><img loading="lazy" src="https://cdn.pixabay.com/photo/2016/11/18/17/20/living-room-1835923_960_720.jpg" alt="sala"></picture></li>
+                    <li id="slide3"><picture><img loading="lazy" src="https://cdn.pixabay.com/photo/2016/08/11/23/48/mountains-1587287_960_720.jpg" alt="mountains" srcset=""></picture></li>
+                    <li id="slide4"><picture><img loading="lazy" src="https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593327_960_720.jpg" alt="laptop"></picture></li>
+                    <li id="slide5"><picture><img loading="lazy" src="https://cdn.pixabay.com/photo/2021/10/07/15/23/real-estate-6688945_960_720.jpg" alt="inmobiliaria"></picture></li>
+                    <li id="slide6"><picture><img loading="lazy" src="https://cdn.pixabay.com/photo/2017/11/09/21/41/cat-2934720_960_720.jpg" alt="cat"></picture></li>
+                    <li id="slide7"><picture><img loading="lazy" src="https://cdn.pixabay.com/photo/2018/03/18/15/26/villa-3237114_960_720.jpg" alt="gosth-house"></picture></li>
+                    <li id="slide8"><picture><img loading="lazy" src="https://cdn.pixabay.com/photo/2022/04/12/23/27/hot-air-balloons-7129121_960_720.jpg" alt="hot-air-ballons"></picture></li>
+                    <li id="slide9"><picture><img loading="lazy" src="https://cdn.pixabay.com/photo/2022/01/22/16/54/book-6957870_960_720.jpg" alt="book"></picture></li>
+                    <li id="slide10"><picture><img loading="lazy" src="https://cdn.pixabay.com/photo/2022/02/23/05/10/tiramisu-7030032_960_720.jpg" alt="tiramisu"></picture></li>
                 </ul>
             </div>
         </section>
     </main>
     <footer>
         <div class="footer contact">
-        Contacto:
+        Contact:
         </div>
         <button class="footer" type="button"><a href="mailto:lu.pv7@outlook.com"><img loading="lazy" height="40" width="40" src="assets/icons/mail.svg" alt="mail"></a></button>
         <button class="footer" type="button"><a href="https://github.com/Luvitz7"><img loading="lazy" height="32" width="32" src="assets/icons/github.svg" alt="github"></a></button>

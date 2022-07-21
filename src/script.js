@@ -1,17 +1,19 @@
+//
+// addEventListener('resize', event => console.log(event));
+
 // Menu button function
 let clicked = false
 
 const viewMenu = () => {
     const menu = document.getElementById('navMenu');
     if (clicked === false) {
-        menu.setAttribute('CLASS', 'navbar-menu');
+        menu.classList.remove('navbar-menu-hidden');
         clicked = true;
     } else {
-        menu.setAttribute('CLASS', 'navbar-menu-hidden');
+        menu.classList.add('navbar-menu-hidden');
         clicked = false;
     }
 }
-
 
 // Animations 
 
@@ -27,7 +29,7 @@ const ghostVulnerable = () => {
 
 function eyesMove (eye) {
     eye.animate(
-        [ { transform: 'translateX(0)'},
+        [ { transform: 'translateX(0)' },
           { transform: 'translateX(-10px)'}, 
           { transform: 'translateX(0)'}  ],
           { duration: 1500,
