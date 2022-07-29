@@ -7,13 +7,19 @@
     --tech-Mono: 'Share Tech Mono', monospace;
     --style-backdrop-filter: blur(6px);
     --box-shadow-effect: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    /* COLORES */
+    --linear-gradiente: linear-gradient(180deg, rgba(59,193,44,1) 0%, rgba(40,60,156,1) 33%, rgba(145,58,203,1) 66%,rgb(203, 58, 58) 100%);
+    --light-blue : rgba(77,226,215,1);
+    --gren:rgba(59,193,44,1);
+    --blue: rgba(40,60,156,1);
+    --purple: rgba(145,58,203,1);
+    --base-background: rgba(21, 22, 80,1);
 }
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    color: aliceblue;
     font-family: var(--tech-Mono);
 }
 
@@ -24,16 +30,18 @@ html {
 body {
     height: 400vh;
     width: 100%;
-    background: rgb(77,226,215);
-    background: linear-gradient(0deg, rgba(77,226,215,1) 0%, rgba(59,193,44,1) 33%, rgba(40,60,156,1) 66%, rgba(145,58,203,1) 100%);
+    background: var(--linear-gradiente);
     /* background: rgb(61,88,87);
     background: linear-gradient(0deg, rgba(61,88,87,1) 0%, rgba(38,46,148,1) 49%, rgba(145,58,203,1) 100%); */
     transition: .5s;
+    color: aliceblue;
 }
+
+
 
 /* Header, Menu bar */
 .header {
-    height: 60px;
+    height: 4rem;
     width: 100%;
     display: flex;
     background: var(--background);
@@ -80,14 +88,15 @@ button:hover {
 
 /* Aside and navigation */
 aside {
-    z-index: 2;
+    z-index: 3;
+    position: absolute;
 }
 
 aside ul{
     display: flex;
     flex-direction: column;
     position: fixed;
-    margin-top: 400px;
+    margin-top: 25rem;
     margin-left: 20px;
     background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%);
     border-radius: 4px;
@@ -133,11 +142,11 @@ main {
     width: 100%;
     max-width: 500px;
     height: 20rem;
-    background-color: aliceblue;
+    background:linear-gradient(180deg , rgba(255,255,254,.9) 0%, rgba(255,255,254,.9) 100%);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    top: 60px;
+    top: 4rem;
     right: 0;
     position: fixed;
     transition: .5s;
@@ -168,10 +177,17 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    padding: 0 10% 0 10%;  
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 2.5rem;
     justify-content: center; 
 }
 
+.first-section {
+    background: var(--base-background);
+    display: flex;
+}
 .name {
     font-size: 150px;
 }
@@ -183,79 +199,35 @@ ul li {
 .section div:first-child {
     display: flex;
     justify-content: space-around;
+    text-align: center;
 }
 
 .frontendDev {
     display: none;
 }
 
-/* Structure pacman Gosth */
+.my-name-title {
+    display: inline-block;
+    white-space: nowrap;
+    border-right: 2px solid;
+    width: 10ch;
 
-.body-pacman {
-    background: greenyellow;
-    width: 120px;
-    height: 150px;
-    border-radius: 50px 50px 0 0;
-    justify-content: space-around;
-    animation-name: ghost;
-    animation-duration: 6s;
-    animation-timing-function: ease-out;
-    animation-iteration-count: infinite;
-    transition: .3s;
-    align-items: center;
-    box-shadow: var(--box-shadow-effect);
-    cursor: pointer;
+    animation: typing 3s steps(10) infinite alternate, blink .5s infinite alternate step-end;
+    overflow: hidden;
 }
 
-.eyes {
-    background-color: aliceblue;
-    width: 30px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50px;
+@keyframes typing {
+    from { width: 0; }
 }
 
-.eye-iris {
-    background-color: rgb(87, 119, 189);
-    width: 15px;
-    height: 15px;
-    border-radius: 45%;
-    /* animation-name: eyes-move;
-    animation-duration: 1.5s;
-    animation-iteration-count: 2;
-    animation-delay: 2s; */
+@keyframes blink {
+    50% { border-color: transparent; }
 }
-
-.vulnerable {
-    background: rgb(33, 33, 255);
-    animation-name: vulnerable-ghost;
-    animation-duration: 1.5s;
-    animation-iteration-count: 3;
-    transition: .3s;
-}
-/* Animation for pacman ghost */
-
-@keyframes ghost {
-    0%{ transform: translateX(-40%); opacity: 0 ;}
-    50%{ transform: translateX(90%); opacity: 1 ;}
-    100%{ transform: translateX(-40%); opacity: 0;}
-}
-
-@keyframes vulnerable-ghost {
-    0%{ transform: translateX(-40%) scale(.9);}
-    50%{ transform: translateX(90%) scale(.9);}
-    100%{ transform: translateX(-40%) scale(.9);}
-}
-
-/* @keyframes eyes-move {
-    0% { transform: translateX(0);}
-    50% { transform: translateX(-10px);} 
-    100% { transform: translateX(0);}   
-} */
-
 /* My description */
+
+.aboutMe-section {
+    max-width: 1000px;
+}
 
 .card-my-self {
     display: flex;
@@ -266,16 +238,16 @@ ul li {
 }
 .container-photo {
     width: 80%;
-    height: 80%;
-    max-width: 320px;
-    max-height: 320px;
+    height: auto;
+    max-width: 300px;
     background: linear-gradient(0deg, rgba(253,187,45,1) 0%, rgba(233,227,149,0.9836309523809523) 64%, rgba(253,187,45,1) 100%);
     box-shadow: var(--box-shadow-effect);
     position: relative;
 }    
 
 picture {
-    position: absolute;
+    display: flex;
+    justify-content: center;
 }
 .my-photo {
     margin: -25px ;
@@ -292,11 +264,10 @@ picture {
 /* Skills Section */
 
 .container-skills-svg {
-    width: 90%;
-    height: 24rem;
+    height: 22rem;
     background: linear-gradient(0 ,rgba(0,0,0,.5) , rgba(0,0,0,.5));
-    backdrop-filter: drop-shadow(4px 4px 10px blue);
     border-radius: 8px;
+    border: aliceblue 2px solid;
 }
 
 .container-icons-tecnology .vanilla, .frameworks {
@@ -311,8 +282,14 @@ picture {
 }
 
 .skills-section {
-    justify-content: center;
-    margin-left: 2rem;
+    justify-items: center;
+    background: var(--base-background);
+    max-width: 1000px;
+    backdrop-filter: var(--box-shadow-effect);
+}
+
+.tecnologias {
+    width: 90%;
 }
 
 
@@ -363,7 +340,7 @@ picture {
 
 .slide-container {
     position: relative;
-    width: 100%;
+    width: 90%;
     height: 60%;
 }
 .slide {
@@ -382,8 +359,7 @@ picture {
 }
 
 .slide li img{
-    width: 100%;
-    height: 80%;
+    width: 90%;
     max-width: 800px;
     max-height: 400px;
     border-radius: 4px;
@@ -407,7 +383,7 @@ picture {
 
 footer {
     display: grid;
-    height: 60px;
+    height: 4rem;
     width: 100%;
     grid-template-columns: repeat(5, 100px);
     justify-content: center;
@@ -416,12 +392,12 @@ footer {
     position: fixed;
     background: var(--background);
     backdrop-filter: var(--style-backdrop-filter);
+    z-index: 3;
 }
 
 .footer {
     margin-left: auto;
     margin-right: auto;
-    z-index: 1;
 }
 
 
@@ -493,7 +469,7 @@ footer {
     }
     
     aside ul li a span:hover {
-        width: 40px;
+        width: auto;
         background-color: red;
         transition: .3s;
     }
@@ -518,22 +494,21 @@ footer {
         height: auto;
     }
 
-    .container-photo {
-        width: auto;
-    }
     .my-description {
-        margin-left: 0;
         margin-top: 2rem;
     }
 
-    .container-skills-svg {
+    .tecnologias {
         width: 100%;
+    }
+
+    .container-skills-svg {
         height: auto;
     }
     .skills-section {
         justify-content: center;
-        margin-left: 0;
         align-items: initial;
+        padding: 0 3rem;
     }    
     .container-title-projects {
         margin-top: 9rem
@@ -565,7 +540,6 @@ footer {
 
     .name {
         font-size: 50px;
-        margin-bottom: 135px;
     }
     .intro {
         display: flex;
@@ -585,7 +559,6 @@ footer {
         width: 100%;
         height: 100%;
         max-width: 260px;
-        min-height: 450px;
     }
     footer{
         grid-template-columns: repeat(4, 60px);
