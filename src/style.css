@@ -14,6 +14,7 @@
     --blue: rgba(40,60,156,1);
     --purple: rgba(145,58,203,1);
     --base-background: rgba(21, 22, 80,1);
+    --gold-base: linear-gradient(0deg, rgba(253,187,45,1) 0%, rgba(233,227,149,0.9836309523809523) 64%, rgba(253,187,45,1) 100%);
 }
 
 * {
@@ -30,9 +31,6 @@ html {
 body {
     height: 400vh;
     width: 100%;
-    background: var(--linear-gradiente);
-    /* background: rgb(61,88,87);
-    background: linear-gradient(0deg, rgba(61,88,87,1) 0%, rgba(38,46,148,1) 49%, rgba(145,58,203,1) 100%); */
     transition: .5s;
     color: aliceblue;
 }
@@ -86,54 +84,11 @@ button:hover {
     width: 38px;
 }
 
-/* Aside and navigation */
-aside {
-    z-index: 3;
-    position: absolute;
-}
-
-aside ul{
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    margin-top: 25rem;
-    margin-left: 20px;
-    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%);
-    border-radius: 4px;
-}
-
-aside ul li {
-    position: relative;
-    width: 40px;
-    height: 8px;
-    margin: 8px;
-    cursor: pointer;
-    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%);
-}
-
-aside ul li a span {
-    position: absolute;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    background-color: aliceblue;
-    border-radius: 4px;
-    transition: .3s;
-}
-
-aside ul li a span:hover {
-    width: 60px;
-    background-color: red;
-    transition: .3s;
-}
-
 /* Container main page */
 
 main {
     width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-rows: repeat(4, 1fr);
+    height: 25%;
 }
 
 /* Navbar Menu */
@@ -174,14 +129,11 @@ main {
 /* Section; Works in 4 parts (Intro, About, Experience o Tecnology, and Portfolio */
 
 .section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     align-items: center;
     width: 100%;
     height: 100%;
-    margin: 0 auto;
-    padding: 2.5rem;
-    justify-content: center; 
+    justify-content: center;
+    padding: 2rem;
 }
 
 .first-section {
@@ -194,12 +146,6 @@ main {
 
 ul li {
     list-style: none;
-}
-
-.section div:first-child {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
 }
 
 .frontendDev {
@@ -227,6 +173,11 @@ ul li {
 
 .aboutMe-section {
     max-width: 1000px;
+    margin: 0 auto;
+    color: var(--base-background);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-content: center;
 }
 
 .card-my-self {
@@ -240,7 +191,7 @@ ul li {
     width: 80%;
     height: auto;
     max-width: 300px;
-    background: linear-gradient(0deg, rgba(253,187,45,1) 0%, rgba(233,227,149,0.9836309523809523) 64%, rgba(253,187,45,1) 100%);
+    background: var(--base-background);
     box-shadow: var(--box-shadow-effect);
     position: relative;
 }    
@@ -270,11 +221,21 @@ picture {
     border: aliceblue 2px solid;
 }
 
+.container-skills-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
 .container-icons-tecnology .vanilla, .frameworks {
     display: flex;
     padding: 1rem;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: baseline;
 }
 
 .frameworks {
@@ -284,101 +245,90 @@ picture {
 .skills-section {
     justify-items: center;
     background: var(--base-background);
-    max-width: 1000px;
-    backdrop-filter: var(--box-shadow-effect);
 }
 
 .tecnologias {
-    width: 90%;
+    width: 45%;
 }
-
-
 /* Slider for Porfolio */
 
 .projects {
+    padding: 0;
     display: flex;
-    flex-direction: column;
+    position: relative;
+    justify-content: initial;
     width: 100%;
     height: 100%;
-    justify-content: center;
-    align-content: center;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
 }
 
 .container-title-projects {
+    height: 100%;
+    width: 100%;
+    min-width: 100%;
+    background-image: linear-gradient( rgba(0,0,0,.5) 0, rgba(0,0,0,.5) 100%), url('https://cdn.pixabay.com/photo/2018/05/18/15/30/web-design-3411373_960_720.jpg');
+    background-color: var(--base-background);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+.project-text-area {
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.portfolio {
-    display: flex;
-}
-
-.portfolio li {
-    width: 20px;
-    height: 8px;
-    border-radius: 5px;
-    background-color: aliceblue;
-    margin: 10px;
-    transition: .3s;
-    position: relative;
-    overflow: hidden;
-}
-
-.portfolio li:hover {
-    background-color: red;
-    width: 40px;
-    transition: width .3s;
-}
-
-.portfolio li a span{
+    background-image: linear-gradient(rgba(0,0,0,.5) 0, rgba(0,0,0,.5) 100%);
+    margin: 0 auto;
+    height: auto;
     width: 100%;
-    height: 100%;
-    position: absolute;
-
+    color: white;
+    font-size: 1.5rem;
+    top: 25rem;
 }
 
-.slide-container {
-    position: relative;
-    width: 90%;
-    height: 60%;
-}
-.slide {
-    cursor: pointer;
+.separacion {
     width: 100%;
-    height: 100%;
+    height: 2px;
+    background-color: white;
+    margin-top: 1rem;
 }
 
-.slide li{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    display: flex;
-    justify-content: center;
+.description-project {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 1rem;
 }
 
-.slide li img{
-    width: 90%;
-    max-width: 800px;
-    max-height: 400px;
-    border-radius: 4px;
-    object-fit: cover;
-    box-shadow: var(--box-shadow-effect);
+.description-project, .title-project {
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 
-.slide li:target {
-    opacity: 1;
+/* Proyectos imagenes */
+
+.batata-bit {
+    background-image: linear-gradient( rgba(0,0,0,.3) 0, rgba(0,0,0,.3) 100%), url('../assets/images/BatataBit2.PNG');
 }
 
-.slide li:nth-child(1) {
-    opacity: 1;
+.drinksAPI {
+    background-image: linear-gradient( rgba(0,0,0,.3) 0, rgba(0,0,0,.3) 100%), url('../assets/images/DrinksAPI.PNG');
 }
 
-.slide li {
-    transition: .5s;
+.ahorcado {
+    background-image: linear-gradient( rgba(0,0,0,.3) 0, rgba(0,0,0,.3) 100%), url('../assets/images/Ahorcado.PNG');
 }
 
+.climaApp {
+    background-image: linear-gradient( rgba(0,0,0,.3) 0, rgba(0,0,0,.3) 100%), url('../assets/images/ClimaAPP.PNG');
+}
+
+.pokeDex {
+    background-image: linear-gradient( rgba(0,0,0,.3) 0, rgba(0,0,0,.3) 100%), url('../assets/images/PokeDex.PNG');
+}
 /* Footer the contact bar */
 
 footer {
@@ -436,54 +386,27 @@ footer {
     }
 
     .my-description {
-        margin-left: 2rem;
+        margin-left: 1rem;
     }
 }
 
-@media (max-width: 750px) {
-    @media (max-height: 550px) {
-        aside ul {
-            margin-top: 200px;
-            margin-left: 20px;
-        }
-    }
-}
 @media (max-width: 600px) {
     .header-container h2 span {
         display: none;
     }
-    
-    aside {
+
+    .aboutMe-section {
         display: flex;
         flex-direction: column;
-        position: fixed;
-        margin-top: 130px;
-    }
-
-    aside ul li {
-        position: relative;
-        width: 20px;
-        height: 8px;
-        margin: 4px;
-        cursor: pointer;
+        align-items: center;
     }
     
-    aside ul li a span:hover {
-        width: auto;
-        background-color: red;
-        transition: .3s;
-    }
-    
-    .section {
-        display: flex;
+    .container-skills-box {
         flex-direction: column;
     }
     .name {
         font-size: 50px;
         margin-bottom: 15px;
-    }
-    .section div h2 {
-        display: none;
     }
 
     .frontendDev {
@@ -505,17 +428,6 @@ footer {
     .container-skills-svg {
         height: auto;
     }
-    .skills-section {
-        justify-content: center;
-        align-items: initial;
-        padding: 0 3rem;
-    }    
-    .container-title-projects {
-        margin-top: 9rem
-    }
-    .portfolio li {
-        margin: 5px;
-    }
 
     footer{
         grid-template-columns: repeat(4, 100px);
@@ -524,10 +436,6 @@ footer {
     .contact {
         display: none;
     }
-    @media (max-height: 720px){
-        .container-title-projects {
-            margin-top: 5rem
-        }
 }    
 @media (max-width: 400px) {
     .title {
@@ -544,22 +452,7 @@ footer {
     .intro {
         display: flex;
     }
-    .section div h2 {
-        display: none;
-    }
     
-    aside {
-        display: none;
-    }
-
-    .portfolio li {
-        margin: 3px;
-    }
-    .slide li img{
-        width: 100%;
-        height: 100%;
-        max-width: 260px;
-    }
     footer{
         grid-template-columns: repeat(4, 60px);
         margin-bottom: 0;
@@ -567,10 +460,5 @@ footer {
     .contact {
         display: none
     }
-    @media (max-height: 665px){
-        .container-title-projects {
-            margin-top: 5rem
-        }
 }
-}
-}
+
