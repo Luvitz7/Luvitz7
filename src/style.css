@@ -42,11 +42,15 @@ body {
     height: 4rem;
     width: 100%;
     display: flex;
-    background: var(--background);
     align-items: center;
     justify-content: space-between;
     position: fixed;
     z-index: 3;
+    transition: .3s;
+}
+
+.header-visible {
+    background: var(--background);
     backdrop-filter: var(--style-backdrop-filter);
 }
 
@@ -74,9 +78,23 @@ button:hover {
     margin-left: 40px;
 }
 
+.header-menu-desktop {
+    margin-right: 1rem;
+}
+
+.header-menu-desktop button a {
+    display: inline-block;
+    color: aliceblue;
+    font-size: 1rem;
+    text-decoration: none;
+    margin-right: 1rem;
+    width: 100%;
+}
+
 .header-menu {
     display: inline-block;
     width: 60px;
+    display: none;
 }
 
 .icon {
@@ -114,7 +132,7 @@ main {
 }
 .list-element {
     display: inline-block;
-    color: black;
+    color: var(--base-background);
     font-weight: 500;
     font-size: 3.5rem;
     width: 100%;
@@ -178,6 +196,7 @@ ul li {
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-content: center;
+    font-size: 1.3rem;
 }
 
 .card-my-self {
@@ -235,7 +254,8 @@ picture {
     padding: 1rem;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: baseline;
+    align-items: center;
+    text-align: center;
 }
 
 .frameworks {
@@ -249,6 +269,7 @@ picture {
 
 .tecnologias {
     width: 45%;
+    font-size: 1.3rem;
 }
 /* Slider for Porfolio */
 
@@ -275,6 +296,7 @@ picture {
     background-repeat: no-repeat;
     background-attachment: fixed;
     position: relative;
+    transition: 1s;
 }
 .project-text-area {
     position: absolute;
@@ -285,7 +307,7 @@ picture {
     margin: 0 auto;
     height: auto;
     width: 100%;
-    color: white;
+    color: aliceblue;
     font-size: 1.5rem;
     top: 25rem;
 }
@@ -293,7 +315,7 @@ picture {
 .separacion {
     width: 100%;
     height: 2px;
-    background-color: white;
+    background-color: aliceblue;
     margin-top: 1rem;
 }
 
@@ -307,15 +329,23 @@ picture {
     padding-left: 3rem;
     padding-right: 3rem;
 }
+.texto-oculto {
+    display: none;
+}
+.project-text-area:hover .texto-oculto {
+    color: yellow;
+    cursor: pointer;
+    display: initial;
+}
 
 /* Proyectos imagenes */
 
 .batata-bit {
-    background-image: linear-gradient( rgba(0,0,0,.3) 0, rgba(0,0,0,.3) 100%), url('../assets/images/BatataBit2.PNG');
+    background-image: linear-gradient( rgba(0,0,0,.2) 0, rgba(0,0,0,.2) 100%), url('../assets/images/BatataBit2.PNG');
 }
 
 .drinksAPI {
-    background-image: linear-gradient( rgba(0,0,0,.3) 0, rgba(0,0,0,.3) 100%), url('../assets/images/DrinksAPI.PNG');
+    background-image: linear-gradient( rgba(0,0,0,.2) 0, rgba(0,0,0,.2) 100%), url('../assets/images/DrinksAPI.PNG');
 }
 
 .ahorcado {
@@ -323,7 +353,7 @@ picture {
 }
 
 .climaApp {
-    background-image: linear-gradient( rgba(0,0,0,.3) 0, rgba(0,0,0,.3) 100%), url('../assets/images/ClimaAPP.PNG');
+    background-image: linear-gradient( rgba(0,0,0,.2) 0, rgba(0,0,0,.2) 100%), url('../assets/images/ClimaAPP.PNG');
 }
 
 .pokeDex {
@@ -340,9 +370,12 @@ footer {
     align-items: center;
     bottom: 0;
     position: fixed;
+    z-index: 3;
+}
+
+.footer-visible {
     background: var(--background);
     backdrop-filter: var(--style-backdrop-filter);
-    z-index: 3;
 }
 
 .footer {
@@ -373,37 +406,34 @@ footer {
 
 /*Resposive Desing */
 
-@media (max-height: 450px) {
-    aside ul {
-        margin-top: 200px;
-        margin-left: 20px;
-    }
-}
-
 @media (max-width: 860px) {
     .name {
         font-size: 100px;
     }
 
-    .my-description {
-        margin-left: 1rem;
-    }
-}
-
-@media (max-width: 600px) {
     .header-container h2 span {
         display: none;
     }
 
+    .my-description {
+        margin-left: 1rem;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .header-menu-desktop {
+        display: none;
+    }
+    .header-menu {
+        display: inline-block;
+    }
     .aboutMe-section {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    
-    .container-skills-box {
-        flex-direction: column;
-    }
+
     .name {
         font-size: 50px;
         margin-bottom: 15px;
@@ -423,6 +453,10 @@ footer {
 
     .tecnologias {
         width: 100%;
+    }
+
+    .container-skills-box {
+        flex-direction: column;
     }
 
     .container-skills-svg {

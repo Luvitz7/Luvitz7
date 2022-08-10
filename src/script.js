@@ -19,6 +19,15 @@ const viewMenu = () => {
 
 // Scroll anitions page
 
+const header = document.querySelector('.header');
+const footer = document.querySelector('footer');
+
+window.addEventListener('scroll', () => {
+    window.scrollY >= 60 ? header.classList.add('header-visible') : header.classList.remove('header-visible');
+    window.scrollY >= 60 ? footer.classList.add('header-visible') : footer.classList.remove('header-visible');
+});
+
+
 // const containerSkillsLeft = document.getElementById('container-Skills-Left');
 // const containerSkillsRight = document.getElementById('container-Skills-Right');
 
