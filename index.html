@@ -22,7 +22,7 @@
                     <img loading="lazy" src="assets/icons/home1.svg" alt="home" class="icon">
                 </a>
             </button>
-            <h2 class="title" id="titleName">Ludwig PV<span> - FullStack developer</span> </h2>
+            <h2 class="title" id="titleName">Ludwig PV<span> - Frontend developer</span> </h2>
             <div class="buttonLang-container">
                 <button class="buttonLang" id="btn-language" type="button" onclick="changeLanguage()">ES</button>
             </div>
@@ -53,9 +53,9 @@
         <section class="section first-section" id="seccion-presentation">
             <div class="my-name">
                 <h1 class="name seccion-title">
-                    <span class="my-name-iAm">I am</span><br>
+                    <span class="my-name-iAm">Hola soy</span><br>
                     <span class="my-name-title">Ludwig PV</span><br>
-                    <span class="fullStackDev">FullStack Developer</span>
+                    <span class="fullStackDev">Frontend Developer</span>
                 </h1>
             </div>
         </section>
@@ -169,6 +169,50 @@
                         </p>
                     </div>
                 </a>
+            </article>
+        </section>
+        <section class="section section-contact">
+            <article class="container-title-contact">
+                <h2 id="contactTitle">Contacto</h2>
+                <p id="contactP1">
+                    Si quieres contactar conmigo, puedes hacerlo a traves de este formulario
+                </p>
+                <form id="formularioContacto">
+                    <input name="name" type="text" 
+                    placeholder="Ingresa tu nombre *" 
+                    title="nombre solo acepta letras y espacios en blanco"
+                    pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+                    required>
+                    <input name="email" type="email"
+                    placeholder="Ingresa tu correo *"
+                    title="Ingresa un correo valido"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                    required
+                    >
+                    <textarea name="message" id="" cols="50" rows="10"
+                    placeholder="Ingresa tu mensaje *"
+                    required
+                    ></textarea>
+                    <button class="btn-submit" type="submit" click="sendForm()">ENVIAR MENSAJE</button>
+                </form>
+                <div class="mail-send-confirmation">
+                    <p class="mail-send-confirmation-text">Gracias por tus comentarios</p>
+                    <svg class="loader-svg"
+                        version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve" width="100px" height="100px">
+                        <path fill="#151650" d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50">
+                        <animateTransform 
+                            attributeName="transform" 
+                            attributeType="XML" 
+                            type="rotate"
+                            dur="1s" 
+                            from="0 50 50"
+                            to="360 50 50" 
+                            repeatCount="indefinite" />
+                        </path>
+                    </svg>
+                </div>
+                
             </article>
         </section>
     </main>

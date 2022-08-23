@@ -331,11 +331,12 @@ picture {
 .projects {
     padding: 0;
     display: grid;
-    background-color: black;
+    background-color: var(--base-background);
     justify-content: initial;
     width: 100%;
     height: 100%;
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: .5rem;
 }
 
 .container-title-projects {
@@ -409,6 +410,76 @@ picture {
 .pokeDex {
     background-image: url('../assets/images/PokeDex.PNG');
 }
+
+/* Contact Section */
+
+.section-contact {
+    color: var(--base-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.container-title-contact {
+    margin-top: 1rem;
+    margin-bottom: 1reme;
+}
+
+.container-title-contact form {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.container-title-contact form input {
+    height: 2rem;
+    border: none;
+    border-bottom: 1px solid var(--base-background);
+    padding-left: .5rem;
+}
+textarea {
+    margin-top: 1rem;
+    padding: .5rem;
+    height: 10rem;
+    border: 1px solid var(--base-background);
+}
+.btn-submit {
+    height: 2rem;
+    margin-top: 1rem;
+    background-color: aliceblue;
+    color: var(--base-background);
+    border: 1px solid var(--base-background);
+    transition: .2s;
+}
+
+.btn-submit:hover {
+    background-color: var(--base-background);
+    color: aliceblue;
+}
+
+.mail-send-confirmation {
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center  ;
+    transition: .5s;
+}
+
+.mail-send-confirmation-text {
+    height: 100px;
+    line-height: 2.5rem;
+    display: inline-block;
+    padding-top: .5rem;
+}
+
+.loader-svg {
+    display: none;
+}
+
 /* Footer the contact bar */
 
 footer {

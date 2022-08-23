@@ -22,6 +22,34 @@ window.addEventListener('scroll', () => {
     window.scrollY >= 60 ? header.classList.add('header-visible') : header.classList.remove('header-visible');
 });
 
+// Send form
+
+addEventListener('submit', (e) => {
+    e.preventDefault();
+    const boxconfirmed = document.querySelector('.mail-send-confirmation');
+    const textConfirmed = document.querySelector('.mail-send-confirmation-text');
+    const loaderSVG= document.querySelector('.loader-svg');
+
+    boxconfirmed.setAttribute('style', 'display: initial');
+
+    fetch("https://formsubmit.co/ajax/6372ad8b415f476c99607e6f0a347ed7", {
+    method: "POST",
+    body: new FormData(e.target)
+})
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        loaderSVG.setAttribute('style', 'display: none');
+        textConfirmed.innerText = 'Mensaje enviado con exito';
+        textConfirmed.setAttribute('style', 'display: initial');
+    })
+    .catch(error => {
+        console.log(error);
+        loaderSVG.setAttribute('style', 'display: none');
+        textConfirmed.innerText = 'Error al enviar el formulario, intente de nuevo';
+        textConfirmed.setAttribute('style', 'display: initial');
+        });
+});
 // Language
 
 // Change language
