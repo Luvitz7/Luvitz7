@@ -462,6 +462,7 @@ textarea {
 }
 
 .mail-send-confirmation {
+    display: none;
     margin-top: 2rem;
     font-size: 1.3rem;
     font-weight: 700;
@@ -470,13 +471,13 @@ textarea {
 }
 
 .mail-send-confirmation-text {
+    display: none;
     height: 100px;
     line-height: 2.5rem;
-    display: inline-block;
     padding-top: .5rem;
 }
 
-.loader-svg {
+.loader-svg-hidden {
     display: none;
 }
 

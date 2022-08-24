@@ -29,27 +29,32 @@ addEventListener('submit', (e) => {
     const boxconfirmed = document.querySelector('.mail-send-confirmation');
     const textConfirmed = document.querySelector('.mail-send-confirmation-text');
     const loaderSVG= document.querySelector('.loader-svg');
+    const formulario = document.getElementById('formularioContacto');
 
-    boxconfirmed.setAttribute('style', 'display: initial');
+    loaderSVG.classList.remove('loader-svg-hidden');
+    boxconfirmed.setAttribute('style', 'display: inherit');
 
     fetch("https://formsubmit.co/ajax/6372ad8b415f476c99607e6f0a347ed7", {
     method: "POST",
     body: new FormData(e.target)
 })
-    .then(response => response.json())
+    .then(response => {response.json()
+    })
     .then(data => {
         console.log(data);
-        loaderSVG.setAttribute('style', 'display: none');
-        textConfirmed.innerText = 'Mensaje enviado con exito';
-        textConfirmed.setAttribute('style', 'display: initial');
+        loaderSVG.classList.add('loader-svg-hidden');
+        textConfirmed.innerText = 'Tu mensaje se envio con exito';
+        textConfirmed.setAttribute('style', 'display: inline-block');
+        formulario.reset();
     })
     .catch(error => {
         console.log(error);
-        loaderSVG.setAttribute('style', 'display: none');
+        loaderSVG.classList.add('loader-svg-hidden');
         textConfirmed.innerText = 'Error al enviar el formulario, intente de nuevo';
-        textConfirmed.setAttribute('style', 'display: initial');
+        textConfirmed.setAttribute('style', 'display: inline-block');
         });
 });
+
 // Language
 
 // Change language
