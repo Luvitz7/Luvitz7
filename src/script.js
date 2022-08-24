@@ -120,6 +120,14 @@ const dictionary = {
                 description: 'Aplicación javascript para buscar pokemon y stats',
             },
         },
+        contact: {
+            title: 'Contacto',
+            parrafo1: 'Si quieres contactar conmigo, puedes hacerlo a traves de este formulario',
+            inputName: 'Ingresa tu nombre *',
+            inputEmail: 'Ingresa tu correo *',
+            inputMessage: 'Escribe tu mensaje *',
+            btnSend: 'ENVIAR MENSAJE',
+        },
     },
     'EN': {
         nabvar: {
@@ -168,24 +176,37 @@ const dictionary = {
                 description: 'JavaScript aplication to search the pokemon and stats',
             },
         },
+        contact: {
+            title: 'Contact',
+            parrafo1: 'If you want to contact me, you can do it through this form',
+            inputName: 'Enter your name *',
+            inputEmail: 'Enter your email *',
+            inputMessage: 'Write your message *',
+            btnSend: 'SEND MESSAGE',
+        },
     }
 }
 
 const setLanguage = (language) => {
+    // Secciones del navbar
     const home = document.querySelectorAll('#home');
     const aboutMe = document.querySelectorAll('#aboutMe');
     const skills = document.querySelectorAll('#skills');
     const projects = document.querySelectorAll('#projects');
     const contact = document.querySelectorAll('#contact');
+    // Seccion del Saludo - Pantalla principal   
     const saludo = document.querySelector('.my-name-iAm');
+    // Seccion del Acerca de mi
     const aboutMeTitle = document.getElementById('aboutMe-title');
     const aboutMeParrafo1 = document.getElementById('aboutMeP1');
     const aboutMeParrafo2 = document.getElementById('aboutMeP2');
     const aboutMeBtnHistory = document.getElementById('btnHistory');
     const aboutMeBtnCV = document.getElementById('btnCV');
+    // Seccion de Habilidades y Experiencia
     const skillsP1 = document.getElementById('skillsP1');
     const workTitle = document.getElementById('workTitle');
     const workParrafo1 = document.getElementById('workP1');
+    // Seccion de Proyectos
     const batatabit = document.getElementById('batatabit');
     const descriptionBatatabit = document.getElementById('description-batatabit');
     const drinksSearcher = document.getElementById('drinksSearcher');
@@ -197,6 +218,14 @@ const setLanguage = (language) => {
     const pokedex = document.getElementById('pokedex');
     const descriptionPokedex = document.getElementById('description-pokedex');
     const textClick = document.querySelectorAll('.texto-oculto');
+    // Seccion de Contacto
+    const contactTitle = document.getElementById('contactTitle');
+    const contactParrafo1 = document.getElementById('contactP1');
+    const inputName = document.getElementById('inputName');
+    const inputEmail = document.getElementById('inputEmail');
+    const inputMessage = document.querySelector('textarea');
+    const btnSend = document.getElementById('btnSend');
+
 
     if (language === 'ES') {
         home.forEach(element => {
@@ -233,7 +262,14 @@ const setLanguage = (language) => {
         descriptionWeatherApp.innerText = dictionary.ES.projects.weather_app.description;
         pokedex.innerText = dictionary.ES.projects.pokedex.title;
         descriptionPokedex.innerText = dictionary.ES.projects.pokedex.description;
-        textClick.forEach(element => { element.innerText = dictionary.ES.projects.click_text; });
+        textClick.forEach(element => { element.innerText = dictionary.ES.projects.click_text; 
+        contactTitle.innerText = dictionary.ES.contact.title;
+        contactParrafo1.innerText = dictionary.ES.contact.parrafo1;
+        inputName.placeholder = dictionary.ES.contact.inputName;
+        inputEmail.placeholder = dictionary.ES.contact.inputEmail;
+        inputMessage.placeholder = dictionary.ES.contact.inputMessage;
+        btnSend.innerText = dictionary.ES.contact.btnSend;
+        });
     } else {
         home.forEach(element => {
             element.innerText = dictionary.EN.nabvar.home;
@@ -269,6 +305,12 @@ const setLanguage = (language) => {
         descriptionWeatherApp.innerText = dictionary.EN.projects.weather_app.description;
         pokedex.innerText = dictionary.EN.projects.pokedex.title;
         descriptionPokedex.innerText = dictionary.EN.projects.pokedex.description;
-        textClick.forEach(element => { element.innerText = dictionary.EN.projects.click_text; });
+        textClick.forEach(element => { element.innerText = dictionary.EN.projects.click_text;
+        contactTitle.innerText = dictionary.EN.contact.title;
+        contactParrafo1.innerText = dictionary.EN.contact.parrafo1;
+        inputName.placeholder = dictionary.EN.contact.inputName;
+        inputEmail.placeholder = dictionary.EN.contact.inputEmail;
+        inputMessage.placeholder = dictionary.EN.contact.inputMessage;
+        btnSend.innerText = dictionary.EN.contact.btnSend; });
     }
 }

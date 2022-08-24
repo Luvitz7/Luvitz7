@@ -182,18 +182,16 @@
                     placeholder="Ingresa tu nombre *" 
                     title="nombre solo acepta letras y espacios en blanco"
                     pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
-                    required>
+                    required id="inputName">
                     <input name="email" type="email"
                     placeholder="Ingresa tu correo *"
                     title="Ingresa un correo valido"
                     pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
-                    required
-                    >
+                    required id="inputEmail">
                     <textarea name="message" id="" cols="50" rows="10"
                     placeholder="Ingresa tu mensaje *"
-                    required
-                    ></textarea>
-                    <button class="btn-submit" type="submit" click="sendForm()">ENVIAR MENSAJE</button>
+                    required id="inputMessage"></textarea>
+                    <button class="btn-submit" type="submit" click="sendForm()" id="btnSend">ENVIAR MENSAJE</button>
                 </form>
                 <div class="mail-send-confirmation">
                     <p class="mail-send-confirmation-text text-invisible"></p>
